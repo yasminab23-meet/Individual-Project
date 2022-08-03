@@ -57,9 +57,19 @@ def create_account():
 def hobbies():
     return render_template('hobbies.html')
 
-@app.route('/martial_arts')
+@app.route('/martial_arts',methods = ['GET', 'POST'])
 def martial_arts():
     return render_template('martial_arts.html')
+    global comment
+    if request.method =='POST':
+        try:
+            comment={'subject':request.form['subject'], 'comment': request.form['comment'], 'uid':login_session['user']['localId']}
+            db.child("comment").push(Comment)
+            return redirect(url_for('comments'))
+        except:
+            error = "You couldn't post your comment"
+    return render_template('comments.html', comment= comment)
+
 
 @app.route ('/climbing')
 def climbing():
@@ -69,13 +79,11 @@ def climbing():
 def woodwork():
     return render_template('woodwork.html')
 
-@app.route('/comments')
+@app.route('/comments', methods = ['GET','POST'])
 def comments():
-    
-    return render_template('comments.html')
-
-
-
+    global comment
+    comment= db.child("Comment").get().val()
+    return render_template('comments.html', comment= comment)
 
 
 
