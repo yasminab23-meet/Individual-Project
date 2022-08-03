@@ -3,10 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>MARTIAL ARTS</title>
+    <link rel = "stylesheet" type="text/css" href="static/css/style.css">  
 </head>
 <body>
-    <p> just checking </p>
-    
+    <h4>INTRODUCTION TO MARTIAL ARTS <h4>
+    <p> pleaseee work</p>
+
+<!-- PHOTOS AND CAPTIONS--> 
+    <figure>
+    <img src=  "https://lh5.googleusercontent.com/p/AF1QipOBvpbEkFecqMKsZ_amn_fDgl83Y2wMnyjHjTaL"> 
+    <figcaption class = introductions> Aviel's studio - contact 0549726116 for info </figcaption>
+    </figure>   
+
+    <figure>
+        <img src= "https://pbs.twimg.com/media/Cu7LVm2WAAATxlJ.jpg:large">
+        <figcaption class =introductions> The different types of martial arts</figcaption>
+    </figure>
+
+<!-- COMMENTS--> 
+
+    <p > Leave a comment about your experience with martial arts! <p> 
+
+ <div>
+        <label> Subject* </label>
+        <div> 
+            <form action='/martial_arts_comments' method= 'POST' >
+            <input type="subject" name="subject">
+        </div>
+    </div>
+
+
+    <div> 
+        <label> Comment* </label>
+        <div>
+            <form action='/martial_arts_comments' method= 'POST' >
+            <input type="comment" name="comment" maxlength='150'>
+        </div>
+    </div>
+
+         <div class = 'headings'>
+            <input type="submit">
+        </div>
 
     
 </body>

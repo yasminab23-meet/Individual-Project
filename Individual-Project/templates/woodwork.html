@@ -7,7 +7,45 @@
 <body>
     <p> please work  </p>
     
+<!--PHOTOS AND CAPTIONS-->
+    <figure>
+    <img src=  ""> 
+    <figcaption class = introductions>  </figcaption>
+    </figure>   
 
-    
+    <figure>
+    <img src=  ""> 
+    <figcaption class = introductions>  </figcaption>
+    </figure>  
+
+
+
+
+
+
+<!--COMMENTS-->
+    <p > Leave a comment about your experience with woodwork! <p> 
+ <div>
+        <label> Subject* </label>
+        <div> 
+            <form action='/woodwork_comments' method= 'POST' >
+            <input type="subject" name="subject">
+        </div>
+    </div>
+
+
+    <div> 
+        <label> Comment* </label>
+        <div>
+            <form action='/woodwork_comments' method= 'POST' >
+            <input type="comment" name="comment" maxlength='150'>
+        </div>
+    </div>
+
+         <div class = 'headings'>
+            <input type="submit">
+        </div>
+
+
 </body>
 </html>

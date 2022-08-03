@@ -1,10 +1,13 @@
 img{
 	width: 400px;
 	height: 400px;
-	border = 0;
-
+	style="float:left
 } 
 
-#headings{
+.headings{
 	text-align = 'center';
+}
+
+.introductions{
+	color: darkgray;
 }

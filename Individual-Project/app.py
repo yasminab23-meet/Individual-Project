@@ -32,11 +32,12 @@ def login():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
-        try:
-            login_session['user']=auth.sign_in_with_email_and_password(email, password)
-            return redirect(url_for('hobbies'))
-        except:
-            error='LOGIN FAILED'
+        # try:
+        login_session['user']=auth.sign_in_with_email_and_password(email, password)
+        return redirect(url_for('hobbies'))
+        # except:
+        #     error='LOGIN FAILED'
+        #     print(error)
     return render_template('login.html')
 
 
@@ -68,8 +69,10 @@ def climbing():
 def woodwork():
     return render_template('woodwork.html')
 
-
-
+@app.route('/comments')
+def comments():
+    
+    return render_template('comments.html')
 
 
 
