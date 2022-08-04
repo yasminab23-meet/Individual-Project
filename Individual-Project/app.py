@@ -90,6 +90,16 @@ def woodwork():
             error = "You couldn't post your comment"
     return render_template('woodwork.html')
 
+@app.route('/cooking', methods = ['GET','POST'])
+def cooking():
+    if request.method=='POST':
+        comment={'subject':request.form['subject'],'comment':request.form['comment'], 'uid':login_session['user']['localId']}
+        db.child("comment").push(comment)
+        try:
+            return redirect(url_for('comments'))
+        except:
+            error= "You couldn't post your comment"
+    return render_template('cooking.html')
 
 
 @app.route('/comments', methods = ['GET','POST'])
