@@ -6,12 +6,12 @@
 </head>
 <body>
 
-    <h4 class = 'headings'>
+    <h1 class = headings>
         Comments:
-        </h4> 
-    {% for comment in comments%}
-     <h3> {{comments[comment]['subject']}} </h3>
-      <p> {{comments[comment]['comment']}} </p>
+        </h1> 
+    {% for commen in comments%}
+        <h4 class = headings>Subject :{{comments[commen]['subject']}} </h4>
+        <p> {{comments[commen]['comment']}} </p>
     {%endfor%}
 
     

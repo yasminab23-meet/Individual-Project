@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>WOODWORK</title>
+    <link rel = "stylesheet" type="text/css" href="static/css/style.css">  
 </head>
 <body>
-    <p> please work  </p>
+    <h4 class =headings> INTRODUCTION TO WOODWORK </h4>
+    <p class =headings> please work  </p>
     
 <!--PHOTOS AND CAPTIONS-->
     <figure>
-    <img src=  ""> 
-    <figcaption class = introductions>  </figcaption>
+    <img src=  "https://www.camphillclanabogan.com/sites/default/files/woodwork-inside_0.jpg"> 
+    <figcaption class = introductions> Near you, woodwork workshops for beginners!  </figcaption>
     </figure>   
 
     <figure>
-    <img src=  ""> 
-    <figcaption class = introductions>  </figcaption>
+    <img src=  "https://cdn.shopify.com/s/files/1/2097/5937/products/cd2246176cf920ea4838f3e5e93c42e8a7dc26f7fa5a5ab79a6afa71dc9dd50b_2000x.jpg?v=1639506039 "> 
+    <figcaption class = introductions>  The perfect gift for anyone! You can make these too !</figcaption>
     </figure>  
 
 
@@ -25,10 +27,12 @@
 
 <!--COMMENTS-->
     <p > Leave a comment about your experience with woodwork! <p> 
+
+
  <div>
         <label> Subject* </label>
         <div> 
-            <form action='/woodwork_comments' method= 'POST' >
+<form action='/woodwork' method= 'POST' >
             <input type="subject" name="subject">
         </div>
     </div>
@@ -37,14 +41,15 @@
     <div> 
         <label> Comment* </label>
         <div>
-            <form action='/woodwork_comments' method= 'POST' >
-            <input type="comment" name="comment" maxlength='150'>
+            <input type="comment" name="comment" maxlength='250'>
         </div>
     </div>
 
          <div class = 'headings'>
             <input type="submit">
         </div>
+</form>
+    
 
 
 </body>

@@ -3,33 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title> CLIMBING</title>
+    <link rel = "stylesheet" type="text/css" href="static/css/style.css">   
 </head>
 <body>
-    <p> w7yatak work already</p>
+       <h4 class =headings >INTRODUCTION TO CLIMBING <h4>
+    <p class = headings> w7yatak work already</p>
     
 <!--PHOTOS AND CAPTIONS--> 
 
     <figure>
-    <img src=  ""> 
-    <figcaption class = introductions>  </figcaption>
+    <img src=  "https://images.squarespace-cdn.com/content/v1/5be63c9ed274cb9805e09974/1635484241710-V7EXYA1ZCDM7AV7QCEKW/Kids+Rock+Climbing+Club+at+The+Spot+Golden.jpg"> 
+    <figcaption class = introductions>Shebel with his kids climbing class!  </figcaption>
     </figure>   
 
     <figure>
-    <img src=  ""> 
-    <figcaption class = introductions>  </figcaption>
+    <img src=  "https://coresites-cdn-adm.imgix.net/mpora_new/wp-content/uploads/2016/03/Mountaineering-Equipment-Boots-Gloves-Gear-Jackets-Mountain-Ropes.jpg"> 
+    <figcaption class = introductions> Check out 'LaMetayel' for high quality equipment!  </figcaption>
     </figure>   
     
-
-
 
 
 
 <!--COMMENTS-->
     <p > Leave a comment about your experience with climbing! <p> 
+
  <div>
         <label> Subject* </label>
         <div> 
-            <form action='/climbing_comments' method= 'POST' >
+<form action='/climbing' method= 'POST' >
             <input type="subject" name="subject">
         </div>
     </div>
@@ -38,15 +39,14 @@
     <div> 
         <label> Comment* </label>
         <div>
-            <form action='/climbing_comments' method= 'POST' >
-            <input type="comment" name="comment" maxlength='150'>
+            <input type="comment" name="comment" maxlength='250'>
         </div>
     </div>
 
          <div class = 'headings'>
             <input type="submit">
         </div>
-
-
+</form>
+    
 </body>
 </html>

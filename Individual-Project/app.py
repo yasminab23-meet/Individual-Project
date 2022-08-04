@@ -21,7 +21,6 @@ auth = firebase.auth()
 db = firebase.database()
 
 
-
 @app.route('/')
 def home():
     return render_template('index.html') 
@@ -59,31 +58,44 @@ def hobbies():
 
 @app.route('/martial_arts',methods = ['GET', 'POST'])
 def martial_arts():
-    return render_template('martial_arts.html')
-    global comment
     if request.method =='POST':
+        comment={'subject':request.form['subject'], 'comment': request.form['comment'], 'uid':login_session['user']['localId']}
+        db.child("comment").push(comment)
         try:
-            comment={'subject':request.form['subject'], 'comment': request.form['comment'], 'uid':login_session['user']['localId']}
-            db.child("comment").push(Comment)
             return redirect(url_for('comments'))
         except:
             error = "You couldn't post your comment"
-    return render_template('comments.html', comment= comment)
+    return render_template('martial_arts.html')
 
 
-@app.route ('/climbing')
+@app.route('/climbing',methods = ['GET', 'POST'])
 def climbing():
+    if request.method =='POST':
+        comment={'subject':request.form['subject'], 'comment': request.form['comment'], 'uid':login_session['user']['localId']}
+        db.child("comment").push(comment)
+        try:
+            return redirect(url_for('comments'))
+        except:
+            error = "You couldn't post your comment"
     return render_template('climbing.html')
 
-@app.route('/woodwork')
+@app.route('/woodwork',methods = ['GET', 'POST'])
 def woodwork():
+    if request.method =='POST':
+        comment={'subject':request.form['subject'], 'comment': request.form['comment'], 'uid':login_session['user']['localId']}
+        db.child("comment").push(comment)
+        try:
+            return redirect(url_for('comments'))
+        except:
+            error = "You couldn't post your comment"
     return render_template('woodwork.html')
+
+
 
 @app.route('/comments', methods = ['GET','POST'])
 def comments():
-    global comment
-    comment= db.child("Comment").get().val()
-    return render_template('comments.html', comment= comment)
+    comment= db.child("comment").get().val()
+    return render_template('comments.html', comments= comment)
 
 
 
